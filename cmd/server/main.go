@@ -15,6 +15,8 @@ func main() {
 	router := gin.Default()
 
 	router.GET("/ping", handler.Ping)
+	router.GET("/categories", handler.FindAllCategories)
+	router.GET("/contacts", handler.FindAllContacts)
 
 	log.Println("🚀 Server running at http://localhost:8080")
 	router.Run(":8080")
